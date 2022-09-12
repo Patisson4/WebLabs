@@ -1,0 +1,27 @@
+.info-bar {
+	display: flex;
+	justify-content: space-around;
+}
+
+.header-bar {
+	align-items: center;
+}
+
+.ascii-graphics {
+	width: min-content;
+}
+
+.playing-field {
+	display: flex;
+	justify-content: space-around;
+}
+
+.opponent {
+	display: flex;
+	flex-direction: column;
+	width: min-content;
+}
+
+.nickname {
+	width: min-content;
+}
