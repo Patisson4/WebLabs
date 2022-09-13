@@ -70,7 +70,7 @@ table::before {
 p,
 pre,
 div,
-span {
+ul {
   background-color: #ffffff;
   border: 2px solid #f36dff;
 }
@@ -78,7 +78,7 @@ span {
 p::before,
 pre::before,
 div::before,
-span::before {
+ul::before {
   color: #f36dff;
 }
 
@@ -154,6 +154,10 @@ pre::before {
 
 div::before {
   content: "div";
+}
+
+ul::before {
+  content: "ul";
 }
 
 table::before {
