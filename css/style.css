@@ -1,27 +1,139 @@
-.info-bar {
+body {
+	background-color: black;
+	color: white;
+}
+
+header {
+	background-color: black;
+	border: solid 0.5vmin white;
+	margin: 2vmin;
+	border-radius: 3vmin;
 	display: flex;
 	justify-content: space-around;
-}
-
-.header-bar {
 	align-items: center;
+
 }
 
-.ascii-graphics {
+footer {
+	/*position: fixed;*/
+	/*bottom: 0;*/
+}
+
+.ascii-button {
 	width: min-content;
 }
 
-.playing-field {
+.wallpaper {
+	background-image: url('../img/poker-background.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: -2;
+	top: 0;
+}
+
+.poker-table {
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
+	align-items: center;
+	/*position: fixed;*/
+	z-index: -1;
+}
+
+@media (max-width: 800px) {
+	.ascii-button {
+		display: none;
+	}
+	.poker-table-center-left, .poker-table-center-right, .poker-table-center-small {
+		display: none;
+	}
+}
+
+@media (min-width: 801px) and (max-width: 1000px) {
+	.replacement-button {
+		display: none;
+	}
+	.poker-table-center-left, .poker-table-center-right {
+		display: none;
+	}
+}
+
+@media (min-width: 1001px) and (max-width: 1300px) {
+	.replacement-button {
+		display: none;
+	}
+	.poker-table-center-small, .poker-table-center-left {
+		display: none;
+	}
+}
+
+@media (min-width: 1301px) and (max-width: 1600px) {
+	.replacement-button {
+		display: none;
+	}
+	.poker-table-center-left {
+		display: none;
+	}
+}
+
+@media (min-width: 1601px) and (max-width: 2000px) {
+	.replacement-button {
+		display: none;
+	}
+	.poker-table-center-small {
+		display: none;
+	}
+}
+
+.board-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .opponent {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	width: min-content;
+	flex-grow: 1;
+}
+
+.opponent:nth-child(2) {
+}
+
+.avatar-pic {
+	width: 64px;
+	height: 64px;
 }
 
 .nickname {
+	white-space: nowrap;
 	width: min-content;
+}
+
+.playing-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*position: fixed;*/
+	/*bottom: 0;*/
+}
+
+.chat {
+	width: 20%;
+}
+
+.cards-container {
+	flex-grow: 1;
+	text-align: center;
+}
+
+.score-table {
+	display: grid;
+	width: 20%;
 }

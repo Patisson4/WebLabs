@@ -4,40 +4,59 @@
 	<meta charset="UTF-8">
 	<meta name="keywords" content="1000, тысяча, игра, карты, карточная игра">
 	<meta name="description" content="Играть в тысячу онлайн">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Игра 1000</title>
 	<link rel="icon" href="img/ace-of-hearths.ico" type="image/x-icon">
-	<link rel="stylesheet" href="css/outlines.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="info-bar header-bar">
-	<img src="img/default-profile-image.jpg" width="2.5%" alt="your profile pic">
-	<div>Button 1</div>
-	<div>Button 2</div>
-	<div>Button 3</div>
-	<pre class="ascii-graphics">
+<header>
+	<div>
+		<img class="avatar-pic" src="img/default-profile-image.jpg" alt="your profile pic">
+	</div>
+	<div>Rules</div>
+	<div>Timer</div>
+	<div>Other games</div>
+	<pre class="ascii-button">
  _ __ ___   ___ _ __  _   _
 | '_ ` _ \ / _ \ '_ \| | | |
 | | | | | |  __/ | | | |_| |
 |_| |_| |_|\___|_| |_|\__,_|
 	</pre>
+	<div class="replacement-button">Menu</div>
 </header>
-<main class="playing-field">
-	<div class="opponent" id="0">
-		<span class="nickname">Opponent 1</span>
-		<img src="img/default-profile-image.jpg" width="100%" alt="opponent's profile pic">
+<div class="wallpaper"></div>
+<main>
+	<div class="board-container">
+		<div class="opponent">
+			<span class="nickname">Opponent 1</span>
+			<div>
+				<img class="avatar-pic" src="img/default-profile-image.jpg" alt="opponent's profile pic">
+			</div>
+		</div>
+		<div class="opponent">
+			<span class="nickname">Opponent 2</span>
+			<div>
+				<img class="avatar-pic" src="img/default-profile-image.jpg" alt="opponent's profile pic">
+			</div>
+		</div>
+		<div class="opponent">
+			<span class="nickname">Opponent 3</span>
+			<div>
+				<img class="avatar-pic" src="img/default-profile-image.jpg" alt="opponent's profile pic">
+			</div>
+		</div>
 	</div>
-	<div class="opponent" id="1">
-		<span class="nickname">Opponent 2</span>
-		<img src="img/default-profile-image.jpg" width="100%" alt="opponent's profile pic">
-	</div>
-	<div class="opponent" id="2">
-		<span class="nickname">Opponent 3</span>
-		<img src="img/default-profile-image.jpg" width="100%" alt="opponent's profile pic">
+	<div class="poker-table">
+		<img class="poker-table-left" src="/img/poker-table-left.png" alt="poker table left side">
+		<img class="poker-table-center-left" src="/img/poker-table-center.png" alt="poker table left center side">
+		<img class="poker-table-center-small" src="/img/poker-table-center-small.png" alt="poker table center side">
+		<img class="poker-table-center-right" src="/img/poker-table-center.png" alt="poker table right center side">
+		<img class="poker-table-right" src="/img/poker-table-right.png" alt="poker table right side">
 	</div>
 </main>
-<footer class="info-bar">
-	<ul>Chat
+<div class="playing-container">
+	<ul class="chat">Chat
 		<li>123: aboba</li>
 		<li>123: aboba</li>
 		<li>123: aboba</li>
@@ -48,43 +67,41 @@
 		<li>123: aboba</li>
 		<li>123: aboba</li>
 	</ul>
-	<div>Your Cards</div>
-	<table style="height: min-content">
-		<thead>
-		<tr>
-			<th>Player1</th>
-			<th>Player2</th>
-			<th>Player3</th>
-			<th>Player4</th>
-		</tr>
-		</thead>
-		<tr>
-			<td>0</td>
-			<td>0</td>
-			<td>0</td>
-			<td>0</td>
-		</tr>
-		<tr>
-			<td>0</td>
-			<td>0</td>
-			<td>0</td>
-			<td>0</td>
-		</tr>
-		<tr>
-			<td>0</td>
-			<td>0</td>
-			<td>0</td>
-			<td>0</td>
-		</tr>
-		<tfoot>
-		<tr>
-			<td>0</td>
-			<td>0</td>
-			<td>0</td>
-			<td>0</td>
-		</tr>
-		</tfoot>
-	</table>
+	<div class="cards-container">Your Cards</div>
+	<div class="score-table">
+		<div>
+			<div>Player1</div>
+			<div>Player2</div>
+			<div>Player3</div>
+			<div>Player4</div>
+		</div>
+		<div>
+			<div>0</div>
+			<div>0</div>
+			<div>0</div>
+			<div>0</div>
+		</div>
+		<div>
+			<div>0</div>
+			<div>0</div>
+			<div>0</div>
+			<div>0</div>
+		</div>
+		<div>
+			<div>0</div>
+			<div>0</div>
+			<div>0</div>
+			<div>0</div>
+		</div>
+		<div>
+			<div>0</div>
+			<div>0</div>
+			<div>0</div>
+			<div>0</div>
+		</div>
+	</div>
+</div>
+<footer>
 </footer>
 </body>
 </html>
