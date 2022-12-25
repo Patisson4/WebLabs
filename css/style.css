@@ -6,21 +6,13 @@ body {
 header {
 	background-color: black;
 	border: solid 0.5vmin white;
-	margin: 2vmin;
+	margin: 1vmin;
+	padding: 0.5vmin;
 	border-radius: 3vmin;
+	font-size: 2rem;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-
-}
-
-footer {
-	/*position: fixed;*/
-	/*bottom: 0;*/
-}
-
-.ascii-button {
-	width: min-content;
 }
 
 .wallpaper {
@@ -39,56 +31,40 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/*position: fixed;*/
 	z-index: -1;
 }
 
 @media (max-width: 800px) {
-	.ascii-button {
-		display: none;
-	}
 	.poker-table-center-left, .poker-table-center-right, .poker-table-center-small {
 		display: none;
 	}
 }
 
 @media (min-width: 801px) and (max-width: 1000px) {
-	.replacement-button {
-		display: none;
-	}
 	.poker-table-center-left, .poker-table-center-right {
 		display: none;
 	}
 }
 
 @media (min-width: 1001px) and (max-width: 1300px) {
-	.replacement-button {
-		display: none;
-	}
 	.poker-table-center-small, .poker-table-center-left {
 		display: none;
 	}
 }
 
 @media (min-width: 1301px) and (max-width: 1600px) {
-	.replacement-button {
-		display: none;
-	}
 	.poker-table-center-left {
 		display: none;
 	}
 }
 
 @media (min-width: 1601px) and (max-width: 2000px) {
-	.replacement-button {
-		display: none;
-	}
 	.poker-table-center-small {
 		display: none;
 	}
 }
 
-.board-container {
+.opponent-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -101,9 +77,6 @@ footer {
 	align-items: center;
 	width: min-content;
 	flex-grow: 1;
-}
-
-.opponent:nth-child(2) {
 }
 
 .avatar-pic {
@@ -119,9 +92,7 @@ footer {
 .playing-container {
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	/*position: fixed;*/
-	/*bottom: 0;*/
+	align-items: stretch;
 }
 
 .chat {
@@ -134,6 +105,65 @@ footer {
 }
 
 .score-table {
+}
+
+.score-table table {
 	display: grid;
-	width: 20%;
+	grid-template-columns: minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr);
+	grid-auto-rows: 20%;
+	grid-auto-flow: row;
+	overflow-y: scroll;
+
+	height: 200px;
+
+	border-collapse: collapse;
+	background-color: white;
+	text-align: center;
+}
+
+.score-table thead,
+.score-table tbody,
+.score-table tfoot,
+.score-table tr {
+	display: contents;
+}
+
+.score-table th,
+.score-table td {
+	padding: 15px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.score-table th {
+	position: sticky;
+	top: 0;
+	background: #6c7ae0;
+	font-weight: normal;
+	font-size: 1rem;
+	color: white;
+}
+
+.score-table tfoot td {
+	position: sticky;
+	bottom: 0;
+	background: #6c7ae0;
+	font-weight: normal;
+	font-size: 1rem;
+	color: white;
+}
+
+.score-table th:last-child {
+	border: 0;
+}
+
+.score-table td {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #808080;
+}
+
+.score-table tr:nth-child(even) td {
+	background: #f8f6ff;
 }
