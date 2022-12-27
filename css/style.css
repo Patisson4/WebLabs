@@ -7,7 +7,7 @@ body {
 header {
 	background-color: black;
 	border-bottom: solid 0.25vmin white;
-	border-radius: 3vmin;
+	border-radius: 0 0 3vmin 3vmin;
 	font-size: 1.5rem;
 	box-sizing: border-box;
 
@@ -22,7 +22,7 @@ header {
 footer {
 	background-color: black;
 	border-top: solid 0.25vmin white;
-	border-radius: 3vmin;
+	border-radius: 3vmin 3vmin 0 0;
 	font-size: 1rem;
 	box-sizing: border-box;
 
@@ -123,11 +123,8 @@ footer {
 .avatar-pic {
 	width: 64px;
 	height: 64px;
-	background-color: black;
-}
-
-.opponent.avatar-pic {
-	border-radius: 32px;
+	background-color: white;
+	border-radius: 50%;
 }
 
 .nickname {
@@ -138,22 +135,38 @@ footer {
 
 .playing-container {
 	display: flex;
-	justify-content: center;
-	align-items: stretch;
+	justify-content: space-between;
+	height: 240px;
 }
 
-.chat {
-	width: 20%;
+.chat-window {
+	display: grid;
+	grid-template-columns: minmax(50px, 1fr) minmax(50px, 3fr);
+	grid-auto-flow: row;
+	overflow-y: scroll;
+}
+
+.chat-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.chat-container:last-child {
+	justify-self: flex-end;
+}
+
+.message-content {
+	text-align: center;
 }
 
 .cards-container {
-	flex-grow: 1;
-	text-align: center;
+	display: flex;
+	justify-content: stretch;
 }
 
 .score-table table {
 	display: grid;
-	grid-template-columns: minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr);
+	grid-template-columns: minmax(25px, 0.3fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr);
 	grid-auto-rows: 16.667%;
 	grid-auto-flow: row;
 	overflow-y: scroll;
@@ -178,6 +191,9 @@ footer {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .score-table th {
@@ -210,4 +226,36 @@ footer {
 
 .score-table tr:nth-child(even) td {
 	background: #f8f6ff;
+}
+
+.external-href {
+	color: white;
+}
+
+.external-href:hover {
+	color: grey;
+}
+
+.text-placeholder {
+	background-color: black;
+	border: solid 0.25vmin white;
+	border-radius: 3vmin;
+	font-size: 1rem;
+	margin: 3rem;
+	padding: 1rem;
+}
+
+.loader {
+	margin: auto;
+	border: 4px solid white;
+	border-radius: 50%;
+	border-top: 4px solid gray;
+	width: 50px;
+	height: 50px;
+	animation: spinner 4s linear infinite;
+}
+
+@keyframes spinner {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
 }

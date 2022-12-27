@@ -10,13 +10,15 @@
 	<link rel="stylesheet" href="../css/style.css">
 	<script src="../js/load-time.js"></script>
 	<script src="../js/active-page.js"></script>
+	<script src="../js/intercept-message.js"></script>
+	<script src="../js/draw-cards.js"></script>
 </head>
 <body>
 <header>
 	<div>
 		<img class="avatar-pic" src="../img/default-profile-image.png" alt="profile pic">
 	</div>
-	<div>Rules</div>
+	<div><a class="button" href="rules.html">Rules</a></div>
 	<div><a class="button" href="">The Game</a></div>
 	<div>Timer</div>
 	<div><a class="button" href="index.html">Main Menu</a></div>
@@ -52,23 +54,20 @@
 	</div>
 </main>
 <div class="playing-container">
-	<ul class="chat">Chat
-		<li>123: aboba</li>
-		<li>123: aboba</li>
-		<li>123: aboba</li>
-		<li>123: aboba</li>
-		<li>123: aboba</li>
-		<li>123: aboba</li>
-		<li>123: aboba</li>
-		<li>123: aboba</li>
-		<li>123: aboba</li>
-	</ul>
-	<div class="cards-container">Your Cards</div>
+	<div class="chat-container">
+		<div class="chat-window"></div>
+		<form id="chat-form">
+			<input id="message-form" type="text" name="message">
+		</form>
+	</div>
+	<div class="cards-container">
+		<div class="loader"></div>
+	</div>
 	<div class="score-table">
 		<table>
 			<thead>
 			<tr>
-				<th>Round</th>
+				<th>№</th>
 				<th>Opponent 1</th>
 				<th>Opponent 2</th>
 				<th>Opponent 3</th>
@@ -135,7 +134,7 @@
 			</tbody>
 			<tfoot>
 			<tr>
-				<td>Total</td>
+				<td>Σ</td>
 				<td>0</td>
 				<td>0</td>
 				<td>0</td>
@@ -147,7 +146,8 @@
 </div>
 <footer>
 	<span id="load-time">time here</span>
-	<a style="color: white;" href="https://www.vecteezy.com/free-vector/casino-background">Casino Background Vectors by Vecteezy</a>
+	<a class="external-href" href="https://www.vecteezy.com/free-vector/casino-background">Casino Background Vectors by
+		Vecteezy</a>
 </footer>
 </body>
 </html>
