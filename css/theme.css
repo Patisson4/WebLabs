@@ -27,6 +27,15 @@
 	color: grey;
 }
 
+.text-placeholder {
+	background-color: black;
+	border: solid 0.25vmin white;
+	border-radius: 3vmin;
+	font-size: 1rem;
+	margin: 3rem;
+	padding: 1rem;
+}
+
 .opponent {
 	display: flex;
 	flex-direction: column;
