@@ -31,6 +31,6 @@ async function getDeck() {
 function createCard(image) {
     const card = document.createElement("img");
     card.setAttribute("src", image);
-    card.setAttribute("style", "height: 80%");
+    card.setAttribute("class", "card");
     return card
 }

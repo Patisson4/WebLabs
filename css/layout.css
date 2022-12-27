@@ -1,0 +1,61 @@
+header {
+	background-color: black;
+	border-bottom: solid 0.25vmin white;
+	border-radius: 0 0 3vmin 3vmin;
+	font-size: 1.5rem;
+	box-sizing: border-box;
+
+	position: fixed;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	top: 0;
+}
+
+footer {
+	background-color: black;
+	border-top: solid 0.25vmin white;
+	border-radius: 3vmin 3vmin 0 0;
+	font-size: 1rem;
+	box-sizing: border-box;
+
+	position: fixed;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	bottom: 0;
+}
+
+.opponent-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.playing-container {
+	display: flex;
+	justify-content: space-between;
+	height: 25vh;
+}
+
+.chat-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.chat-container:last-child {
+	justify-self: flex-end;
+}
+
+@media (max-width: 600px) {
+	.chat-container
+	{
+		display: none;
+	}
+}
+
+.cards-container {
+	display: flex;
+	justify-content: center;
+}

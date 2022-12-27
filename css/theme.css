@@ -1,0 +1,119 @@
+.wallpaper {
+	background-image: url('../img/poker-background.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: -2;
+	top: 0;
+}
+
+.button {
+	text-decoration: none;
+	color: white;
+}
+
+.button:hover {
+	color: grey;
+}
+
+.external-href {
+	color: white;
+}
+
+.external-href:hover {
+	color: grey;
+}
+
+.opponent {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: min-content;
+	flex-grow: 1;
+	transform: translateY(345px);
+}
+
+.opponent:nth-child(2) {
+	transform: translateY(140px);
+}
+
+.avatar-pic {
+	width: 64px;
+	height: 64px;
+	background-color: white;
+	border-radius: 50%;
+}
+
+.nickname {
+	white-space: nowrap;
+	background-color: black;
+	width: min-content;
+}
+
+.card {
+	flex-shrink: 1;
+	max-width: 10%;
+	height: fit-content;
+}
+
+.score-table th,
+.score-table td {
+	padding: 15px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.score-table th {
+	position: sticky;
+	top: 0;
+	background: #6c7ae0;
+	font-weight: normal;
+	font-size: 1rem;
+	color: white;
+}
+
+.score-table tfoot td {
+	position: sticky;
+	bottom: 0;
+	background: #6c7ae0;
+	font-weight: normal;
+	font-size: 1rem;
+	color: white;
+}
+
+.score-table th:last-child {
+	border: 0;
+}
+
+.score-table td {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #808080;
+}
+
+.score-table tr:nth-child(even) td {
+	background: #f8f6ff;
+}
+
+.loader {
+	margin: auto;
+	border: 4px solid white;
+	border-radius: 50%;
+	border-top: 4px solid gray;
+	width: 50px;
+	height: 50px;
+	animation: spinner 4s linear infinite;
+}
+
+@keyframes spinner {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,8 @@
+.button.active {
+	border-bottom: solid 0.25vmin white;
+	border-radius: 5px;
+}
+
+.button.active:hover {
+	border-color: grey;
+}
